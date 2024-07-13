@@ -1,0 +1,199 @@
+/* Apply default styling to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Style for the body */
+body {
+  min-height: 100vh; /* Full viewport height */
+  background: url("img/europe.jpg") center / cover no-repeat; /* Background image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container for the table */
+main.table {
+  width: 82vw; /* 82% of viewport width */
+  height: 90vh; /* 90% of viewport height */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Semi-transparent white background */
+  backdrop-filter: blur(7px); /* Blur effect */
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.5); /* Box shadow */
+  border-radius: 0.8rem; /* Rounded corners */
+  overflow: hidden;
+}
+
+/* Header of the table */
+.table_header {
+  width: 100%;
+  height: 10%;
+  background-color: #fff4; /* Light semi-transparent white */
+  padding: 0.8rem 2.6rem; /* Padding */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Input group within the table header */
+.table_header .input-group {
+  width: 25%;
+  height: 75%;
+  background-color: #fff5; /* Light semi-transparent white */
+  padding: 0 0.9rem; /* Padding */
+  border-radius: 2rem; /* Rounded corners */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s; /* Transition for hover effect */
+}
+
+/* Style for the search icon within the input group */
+.table_header .input-group img {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Style for the search input field */
+.table_header .input-group input {
+  width: 100%;
+  padding: 0 0.5rem 0 0.3rem; /* Padding */
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Hover effect for the input group */
+.table_header .input-group:hover {
+  width: 30%; /* Increase width */
+  background-color: #fff7; /* Slightly more opaque */
+  box-shadow: 0 0.1rem 0.4rem #0002; /* Light shadow */
+}
+
+/* Body section of the table */
+.table_body {
+  width: 95%;
+  max-height: calc(89% - 0.8rem); /* Maximum height */
+  background-color: #fffb; /* Semi-transparent white */
+  margin: 0.8rem auto; /* Margin */
+  border-radius: 0.6rem; /* Rounded corners */
+  overflow: auto; /* Scrollable */
+}
+
+/* Style for the scrollbar */
+.table_body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* Style for the scrollbar thumb */
+.table_body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem; /* Rounded corners */
+  background-color: #0004; /* Semi-transparent black */
+  visibility: hidden; /* Hidden by default */
+}
+
+/* Show scrollbar thumb on hover */
+.table_body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+/* Style for the table */
+table {
+  width: 100%;
+}
+
+/* Common style for table elements */
+table,
+th,
+td {
+  border-collapse: collapse; /* Collapse borders */
+  padding: 1rem; /* Padding */
+  text-align: left; /* Left-align text */
+}
+
+/* Style for table headers */
+thead th {
+  position: sticky; /* Stick to the top when scrolling */
+  top: 0;
+  left: 0;
+  background-color: #d5d1defe; /* Light background color */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Style for the sort icon */
+thead th span.icon-arrow {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%; /* Circular */
+  border: 1.4px solid transparent; /* Transparent border */
+  text-align: center;
+  font-size: 1rem;
+  margin-left: 0.5rem; /* Margin */
+  transition: 0.2s ease-in-out; /* Transition */
+}
+
+/* Style for active column headers */
+thead th.active {
+  color: rgb(34, 111, 255); /* Blue color */
+}
+
+/* Style for active sort icon */
+thead th.active span.icon-arrow {
+  border: 1.4px solid rgb(34, 111, 255); /* Blue border */
+}
+
+/* Rotate icon for ascending order */
+thead th.asc span.icon-arrow {
+  transform: rotate(180deg);
+}
+
+/* Style for even rows in the table body */
+tbody tr:nth-child(even) {
+  background-color: #0000000b; /* Light background color */
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+  background-color: #fff6; /* Light background color */
+}
+
+/* Style for the toggle chart icon */
+.toggle-icon {
+  cursor: pointer; /* Pointer cursor */
+  margin-left: 8px; /* Margin */
+  width: 16px;
+  height: 16px;
+}
+
+/* Style for blue buttons */
+.blue-button {
+  background-color: #007bff; /* Blue background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover effect for blue buttons */
+.blue-button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+/* Style for the chart section */
+.chart_section {
+  background-color: #ffffff; /* White background */
+  border-radius: 0.6rem; /* Rounded corners */
+  padding: 1rem; /* Padding */
+}
